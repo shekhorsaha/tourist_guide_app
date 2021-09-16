@@ -1,38 +1,354 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #003580;
+  font-size: 5em;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu {
+  background-color: #003580;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu > ul {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+}
+
+.nav-menu > ul > li {
+  float: left;
+  list-style: none;
+  color: #fff;
+  font-family: consolas;
+  font-size: 1.5em;
   text-align: center;
+  border-right: 2px solid blue;
+  background-color: #0035ff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-menu > ul > li a {
+  display: block;
+  padding: 8px 16px;
+  color: orange;
+  text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-menu > ul > li a:hover {
+  background-color: #003570;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.active-nav-menu {
+  border-bottom: 5px solid orange;
 }
 
-.App-link {
-  color: #61dafb;
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+table {
+  collapse: collapse;
+  border: 2px solid black;
+}
+th {
+  color: green;
+  padding: 10px;
+}
+td {
+  padding: 10px;
+}
+tr:nth-child(even) {
+  background: #ccc;
+}
+tr:nth-child(odd) {
+  background: #fff;
+}
+
+.home {
+  background-color: #f2e1cd;
+}
+.new-place {
+  background-color: #8abeea;
+}
+.about {
+  background-color: #dbf2db;
+  border-left: 3px solid green;
+}
+
+.home,
+.new-place,
+.about {
+  padding: 10px 5px;
+  text-align: left;
+  font-family: consolas;
+  font-size: 1.2em;
+  overflow: auto;
+  display: block;
+}
+
+.edit-place {
+  background-color: #8abeea;
+  overflow: auto;
+  display: block;
+  padding: 10px 5px;
+  text-align: left;
+  font-family: consolas;
+  font-size: 1.2em;
+}
+
+#top-bar {
+  margin: 0 auto;
+  padding: 5px;
+  max-width: 1200px;
+  background-color: #e95420;
+  color: #fff;
+  overflow: auto;
+  display: block;
+  border: 1px solid red;
+}
+.top-bar-item {
+  float: right;
+  margin-left: 20px;
+}
+
+.container {
+  overflow: auto;
+}
+
+.home > .container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.place-row {
+  overflow: auto;
+  background-color: #dbf2db;
+  border: 1px solid blue;
+  margin-bottom: 15px;
+}
+
+.place-row > img {
+  float: left;
+  width: 30%;
+  min-width: 300px;
+  height: 300px;
+  padding: 2px;
+  border-radius: 0% 0% 10% 0%;
+  object-fit: cover;
+  border-right: 1px solid blue;
+}
+
+.place-row > .place-desc {
+  float: left;
+  width: 69.5%;
+  height: 300px;
+  padding: 2px;
+}
+
+.place-row > .place-desc > .place-details > .upper-head > * {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.place-details > .upper-head > p.address {
+  font-family: arial;
+  font-size: 0.8em;
+}
+
+.action {
+  margin: 0;
+  padding: 0;
+  float: right;
+  text-align: center;
+  padding: 4px 14px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-size: 1em;
+}
+
+.place-details {
+  float: top;
+  height: 80%;
+  width: 100%;
+}
+
+.upper-head {
+  float: left;
+}
+
+.rating-area {
+  float: right;
+  text-align: center;
+  background-color: #06004f;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 30% 0%;
+  padding: 10px 10px;
+  margin-top: 5px;
+}
+
+.action-area {
+  float: bottom;
+  height: 19%;
+  padding: none;
+  width: 100%;
+  overflow: auto;
+}
+
+.action-delete {
+  background-color: red;
+  color: #fff;
+  border: 2px solid red;
+}
+.action-edit {
+  background-color: green;
+  color: #fff;
+  border: 2px solid green;
+}
+.action-delete:hover {
+  background-color: #fff;
+  color: red;
+  border: 2px solid red;
+}
+.action-edit:hover {
+  background-color: #fff;
+  color: green;
+  border: 2px solid green;
+}
+
+.form-div {
+  background-color: #fff;
+  overflow: auto;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  box-shadow: 0 0 100px 5px #999;
+  line-spacing: 20px;
+}
+
+.float-top {
+  float: top;
+  padding: 10px;
+  overflow: auto;
+}
+
+.change-image {
+  background-image: url("https://sample-videos.com/img/Sample-jpg-image-500kb.jpg");
+  repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  position: relative;
+}
+
+#change-image {
+  position: absolute;
+  bottom: 0px;
+  background-color: RGBA(30, 30, 30, 0.7);
+  border: 3px solid RGBA(30, 30, 30, 0.6);
+  color: #fff;
+  padding: 5px;
+}
+
+#change-image:hover {
+  background-color: RGBA(0, 0, 0, 1);
+  color: #fff;
+  border: 3px solid orange;
+}
+
+.float-top label {
+  text-align: center;
+  color: blue;
+  font-size: 1em;
+}
+
+.float-top input[type="button"],
+.float-top input[type="file"],
+.float-top input[type="number"],
+.float-top input[type="text"] {
+  width: 100%;
+  font-size: 1em;
+  border: 3px solid #fff;
+  border-bottom: 3px solid orange;
+}
+
+.float-top input[type="button"]:hover,
+.float-top input[type="button"]:focus,
+.float-top input[type="file"]:focus,
+.float-top input[type="file"]:hover,
+.float-top input[type="number"]:focus,
+.float-top input[type="number"]:hover,
+.float-top input[type="text"]:focus,
+.float-top input[type="text"]:hover {
+  border: 3px solid orange;
+}
+
+.float-top input[type="submit"] {
+  margin: 0 auto;
+  padding: 8px 14px;
+  color: orange;
+  border: 3px solid green;
+  font-size: 1em;
+  background-color: green;
+}
+
+.float-top input[type="submit"]:hover {
+  color: green;
+  background-color: #fff;
+  border: 3px solid orange;
+  cursor: pointer;
+}
+
+#top-bar input[type="text"] {
+  font-size: 0.8em;
+  padding: 4px 8px;
+  content-align: center;
+  border: 3px solid #dbf2db;
+  border-bottom: 3px solid orange;
+}
+
+#top-bar input[type="text"]:focus,
+#top-bar input[type="text"]:hover {
+  border: 3px solid orange;
+}
+
+#top-bar button {
+  color: #fff;
+  padding: 4px 8px;
+  border: 3px solid green;
+  font-size: 0.8em;
+  background-color: grey;
+}
+
+#top-bar button:hover {
+  color: green;
+  background-color: #fff;
+  border: 3px solid orange;
+  cursor: pointer;
+}
+
+div .info {
+  width: 100%;
+  text-align: center;
+  padding: 4px 8px;
+  margin: 0 auto;
+}
+
+.info-success {
+  border-left: 3px solid green;
+  background-color: #bcf5bc;
+}
+
+.info-failed {
+  border-left: 3px solid red;
+  background-color: #ff9b9b;
 }
