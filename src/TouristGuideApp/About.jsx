@@ -15,18 +15,5 @@ function About() {
   );
 }
 
-function Ab() {
-  return (
-    <>
-      <h1> Hello </h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo quam,
-        minima ut nisi voluptatibus non nobis sequi officia sed similique
-        temporibus alias harum eum hic quo eligendi sunt mollitia dolorem.
-      </p>
-    </>
-  );
-}
-
 // export default Ab;
 export default About;
